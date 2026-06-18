@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500;600&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  height: 64px;
+  background: rgba(10, 14, 26, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 16px;
+}
+.nav-logo { font-size: 22px; }
+.nav-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #f0eaff;
+  white-space: nowrap;
+}
+
+.nav-links { display: flex; gap: 4px; flex: 1; }
+
+.nav-link {
+  background: none; border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px; font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  padding: 8px 14px; border-radius: 8px;
+  cursor: pointer; transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.nav-link.active { background: rgba(108,99,255,0.2); color: #a09aff; }
+
+.nav-user { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.nav-avatar { display: flex; align-items: center; gap: 10px; }
+
+.nav-avatar-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 15px; color: #fff;
+  flex-shrink: 0;
+}
+
+.nav-user-info { display: flex; flex-direction: column; }
+.nav-username { font-size: 13px; font-weight: 600; color: #fff; }
+.nav-role { font-size: 11px; font-weight: 500; text-transform: capitalize; }
+
+.nav-logout {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  width: 36px; height: 36px; border-radius: 8px;
+  cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.nav-logout:hover { background: rgba(255,80,80,0.15); border-color: rgba(255,80,80,0.3); color: #ff7070; }
+
+.nav-burger {
+  display: none;
+  background: none; border: none;
+  color: #fff; font-size: 20px; cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-burger { display: block; }
+  .nav-links {
+    display: none; position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: rgba(10,14,26,0.98);
+    flex-direction: column; padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-links.open { display: flex; }
+  .nav-user-info { display: none; }
+}

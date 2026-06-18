@@ -1,0 +1,62 @@
+.fine-page { padding: 32px 40px; max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; }
+
+.fine-toast { position: fixed; top: 80px; right: 24px; background: #1e293b; border: 1px solid rgba(255,255,255,0.15); color: #fff; border-radius: 12px; padding: 12px 20px; font-size: 14px; z-index: 300; animation: toastIn 0.3s ease; }
+@keyframes toastIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+.fine-header { margin-bottom: 32px; }
+.fine-title { font-family: 'Playfair Display', serif; font-size: 32px; color: #f0eaff; margin: 0 0 4px; }
+.fine-sub { color: rgba(255,255,255,0.4); font-size: 14px; margin: 0; }
+
+.fine-loading { display: flex; justify-content: center; padding: 80px; }
+.spinner { width: 40px; height: 40px; border: 3px solid rgba(108,99,255,0.2); border-top-color: #6c63ff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.fine-content { display: flex; flex-direction: column; gap: 20px; }
+
+.fine-current-card {
+  background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(108,99,255,0.05));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 20px; padding: 32px;
+  text-align: center;
+}
+.fine-card-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+.fine-card-amount { font-family: 'Playfair Display', serif; font-size: 56px; color: #a09aff; font-weight: 700; line-height: 1; }
+.fine-card-amount span { font-size: 20px; color: rgba(255,255,255,0.4); font-family: 'DM Sans', sans-serif; font-weight: 400; }
+.fine-card-meta { color: rgba(255,255,255,0.4); font-size: 13px; margin-top: 8px; }
+.fine-card-meta strong { color: rgba(255,255,255,0.7); }
+
+.fine-rules-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 24px;
+}
+.fine-rules-card h3 { font-family: 'Playfair Display', serif; color: #f0eaff; margin: 0 0 16px; }
+.fine-rules-card ul { margin: 0; padding: 0 0 0 4px; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.fine-rules-card li { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.5; }
+.fine-rules-card strong { color: #f0eaff; }
+
+.fine-update-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 24px;
+}
+.fine-update-card h3 { font-family: 'Playfair Display', serif; color: #f0eaff; margin: 0 0 20px; }
+.fine-form { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+.fine-input-wrap {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 0 16px; flex: 1; min-width: 200px;
+}
+.fine-currency { font-size: 20px; color: rgba(255,255,255,0.4); }
+.fine-input-wrap input {
+  background: none; border: none; outline: none;
+  color: #fff; font-size: 24px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif; padding: 12px 0;
+  width: 100%;
+}
+.fine-per { color: rgba(255,255,255,0.4); font-size: 13px; white-space: nowrap; }
+
+.btn-primary { background: linear-gradient(135deg, #6c63ff, #9c93ff); border: none; border-radius: 10px; padding: 12px 24px; color: #fff; font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 12px rgba(108,99,255,0.3); }
+.btn-primary:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(108,99,255,0.45); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+@media (max-width: 600px) { .fine-page { padding: 20px 16px; } }

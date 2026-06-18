@@ -1,0 +1,61 @@
+.users-page { padding: 32px 40px; max-width: 1200px; margin: 0 auto; font-family: 'DM Sans', sans-serif; }
+
+.users-toast {
+  position: fixed; top: 80px; right: 24px;
+  background: #1e293b; border: 1px solid rgba(255,255,255,0.15);
+  color: #fff; border-radius: 12px; padding: 12px 20px;
+  font-size: 14px; z-index: 300; animation: toastIn 0.3s ease;
+}
+@keyframes toastIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+.users-header { margin-bottom: 28px; }
+.users-title { font-family: 'Playfair Display', serif; font-size: 32px; color: #f0eaff; margin: 0 0 4px; }
+.users-sub { color: rgba(255,255,255,0.4); font-size: 14px; margin: 0; }
+
+.users-loading { display: flex; justify-content: center; padding: 80px; }
+.spinner { width: 40px; height: 40px; border: 3px solid rgba(108,99,255,0.2); border-top-color: #6c63ff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.users-grid { display: flex; flex-direction: column; gap: 12px; }
+
+.user-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 20px 24px;
+  display: flex; align-items: center; gap: 18px;
+  transition: border-color 0.2s;
+}
+.user-card:hover { border-color: rgba(108,99,255,0.3); }
+
+.user-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 20px; color: #fff; flex-shrink: 0;
+}
+
+.user-info { flex: 1; }
+.user-name { font-weight: 600; color: #f0eaff; font-size: 15px; }
+.user-username { color: rgba(255,255,255,0.35); font-weight: 400; font-size: 13px; }
+.user-email { color: rgba(255,255,255,0.45); font-size: 13px; margin-top: 2px; }
+.user-phone { color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 2px; }
+.user-meta { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.user-role-badge { border-radius: 20px; padding: 3px 12px; font-size: 11px; font-weight: 600; text-transform: capitalize; }
+.user-joined { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+.user-actions { display: flex; gap: 8px; }
+.btn-edit { background: rgba(234,179,8,0.15); border: 1px solid rgba(234,179,8,0.3); color: #eab308; border-radius: 8px; padding: 7px 14px; font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; }
+.btn-edit:hover { background: rgba(234,179,8,0.25); }
+.btn-delete { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; border-radius: 8px; padding: 7px 14px; font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; }
+.btn-delete:hover { background: rgba(239,68,68,0.25); }
+
+.user-form { display: flex; flex-direction: column; gap: 16px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.04em; }
+.form-field input, .form-field select { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 10px 14px; color: #fff; font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; }
+.form-field input:focus, .form-field select:focus { border-color: #6c63ff; }
+.form-field select option { background: #1e293b; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.btn-primary { background: linear-gradient(135deg, #6c63ff, #9c93ff); border: none; border-radius: 8px; padding: 9px 18px; color: #fff; font-size: 13px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; }
+.btn-cancel { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); border-radius: 8px; padding: 9px 18px; font-size: 13px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+
+@media (max-width: 600px) { .users-page { padding: 20px 16px; } .user-card { flex-wrap: wrap; } .form-grid { grid-template-columns: 1fr; } }
